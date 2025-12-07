@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration</title>
+<style>
+    body {
+        font-family: "Arial", "Algerian", sans-serif;
+        background: linear-gradient(135deg, #85ea7a, #e70f53,);
+        margin: 0;
+        padding: 50px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 100vh;
+
+    }
+
+    .form {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 30px 50px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        width: 470px;
+        color: black;
+        margin-bottom: 50px;
+        height:70vh;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: "Georgia", serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    label {
+        font-weight: bold;
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+        border: 2px solid #5f5f5f;
+        border-radius: 20px;
+        padding: 5px 10px;
+        width: 55%;
+        margin-bottom: 15px;
+    }
+
+    .gender input {
+        margin-left: 10px;
+    }
+
+    .buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    button {
+        background-color: #6cc070;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 30px;
+        margin: 0 10px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #4caf50;
+    }
+
+    button.cancel {
+        background-color: #3cc3a3;
+    }
+
+    button.cancel:hover {
+        background-color: #26a58a;
+    }
+
+    @media (max-width: 500px) {
+        .form {
+            width: 90%;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+        }
+
+        .buttons button {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="form">
+        <h2>Student Registration</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option>C Programming</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>Web Development</option>
+            </select>
+
+            <label for="qualification">Qualification:</label>
+            <select id="qualification" name="qualification">
+                <option>10th</option>
+                <option>12th</option>
+                <option>Graduation</option>
+                <option>Post Graduation</option>
+            </select>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+
+            <div class="buttons">
+                <button type="submit" class="save">Save</button>
+                <button type="button" class="cancel" onclick="window.location.href='index.html'">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
